@@ -23,6 +23,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 
+
 public class RecordJourney extends AppCompatActivity {
     private GifPlayer gif;
     private LocationService.LocationServiceBinder locationService;
@@ -221,15 +222,15 @@ public class RecordJourney extends AppCompatActivity {
 
     // PERMISSION THINGS
 
-    @SuppressLint("MissingSuperCall")
     @Override
     public void onRequestPermissionsResult(int reqCode, String[] permissions, int[] results) {
-        switch(reqCode) {
+        super.onRequestPermissionsResult(reqCode, permissions, results);
+        switch (reqCode) {
             case PERMISSION_GPS_CODE:
                 if (results.length > 0 && results[0] == PackageManager.PERMISSION_GRANTED) {
                     // permission granted
                     initButtons();
-                    if(locationService != null) {
+                    if (locationService != null) {
                         locationService.notifyGPSEnabled();
                     }
                 } else {
@@ -288,3 +289,4 @@ public class RecordJourney extends AppCompatActivity {
         }
     }
 }
+

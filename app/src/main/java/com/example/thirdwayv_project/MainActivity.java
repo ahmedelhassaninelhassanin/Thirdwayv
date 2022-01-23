@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickView(View v) {
-//        // go to the activity for displaying journeys
-//        Intent view = new Intent(MainActivity.this, ViewJourneys.class);
-//        startActivity(view);
+        // go to the activity for displaying journeys
+        Intent view = new Intent(MainActivity.this, ViewJourneys.class);
+        startActivity(view);
     }
 
     public void onClickStatistics(View v) {
-//        // go to the activity for displaying statistics
-//        Intent stats = new Intent(MainActivity.this, StatisticsActivity.class);
-//        startActivity(stats);
+        // go to the activity for displaying statistics
+        Intent stats = new Intent(MainActivity.this, StatisticsActivity.class);
+        startActivity(stats);
     }
 }

@@ -3,9 +3,8 @@
     package="com.example.thirdwayv_project">
 
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -36,6 +35,10 @@
             android:name=".LocationService"
             android:enabled="true"
             android:exported="true" />
+        <activity android:name=".StatisticsActivity" />
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".ViewSingleJourney" />
+        <activity android:name=".ViewJourneys" />
 
         <provider
             android:name=".JourneyProvider"
